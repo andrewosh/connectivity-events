@@ -1,6 +1,6 @@
 {
   "name": "connectivity-events",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Emits events on system wakeup or network status changes.",
   "main": "index.js",
   "scripts": {
