@@ -9,11 +9,10 @@ class ConnectivityMonitor extends EventEmitter {
     super()
 
     this._interval = opts.interval || INTERVAL
-    this._lastPoll = null
-    this._lastNetworkState = null
+    this._lastPoll = 0
+    this._lastState = null
 
     this._timer = setInterval(() => {
-      const self = this
       var currentTime = Date.now()
       var currentState = this._filterInterfaces(os.networkInterfaces())
 
@@ -21,8 +20,8 @@ class ConnectivityMonitor extends EventEmitter {
       const isDifferentState = !equal(currentState, this._lastState)
       if (isWakingUp || isDifferentState) this.emit('change')
 
-      self._lastPoll = currentTime
-      self._lastState = currentState
+      this._lastPoll = currentTime
+      this._lastState = currentState
     }, this._interval)
     if (opts.noUnref !== true) this._timer.unref()
   }
