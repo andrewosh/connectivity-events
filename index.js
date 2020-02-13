@@ -10,7 +10,7 @@ class ConnectivityMonitor extends EventEmitter {
 
     this._interval = opts.interval || INTERVAL
     this._lastPoll = null
-    this._lastNetworkState
+    this._lastNetworkState = null
 
     this._timer = setInterval(() => {
       const self = this
@@ -24,7 +24,7 @@ class ConnectivityMonitor extends EventEmitter {
       self._lastPoll = currentTime
       self._lastState = currentState
     }, this._interval)
-    if (opts.noUnref !== true ) this._timer.unref()
+    if (opts.noUnref !== true) this._timer.unref()
   }
 
   _filterInterfaces (networkInterfaces) {

@@ -4,7 +4,7 @@
   "description": "Emits events on system wakeup or network status changes.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "standard"
   },
   "repository": {
     "type": "git",
@@ -23,5 +23,8 @@
   "homepage": "https://github.com/andrewosh/connectivity-events#readme",
   "dependencies": {
     "fast-deep-equal": "^3.1.1"
+  },
+  "devDependencies": {
+    "standard": "^14.3.1"
   }
 }
