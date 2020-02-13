@@ -1,0 +1,27 @@
+{
+  "name": "connectivity-events",
+  "version": "1.0.0",
+  "description": "Emits events on system wakeup or network status changes.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andrewosh/connectivity-events.git"
+  },
+  "keywords": [
+    "network",
+    "connectivty",
+    "events"
+  ],
+  "author": "Andrew Osheroff <andrewosh@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/andrewosh/connectivity-events/issues"
+  },
+  "homepage": "https://github.com/andrewosh/connectivity-events#readme",
+  "dependencies": {
+    "fast-deep-equal": "^3.1.1"
+  }
+}
